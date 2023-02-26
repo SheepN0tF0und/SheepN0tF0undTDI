@@ -11,14 +11,14 @@ fi
 clear
 echo -e "\e[1;36m Vamos começar atualizando o \e[1;32mTermux.\e[0m"
 
-sleep 4
+sleep 3
 cd ~
 apt update -y && apt full-upgrade -y
 clear
 
 echo -e "\e[1;36m Instalando o Git e as duas linguagens necessarias \e[1;32mPython, Golang\e[0m"
 
-sleep 5
+sleep 3
 
 # Instalando o Git
 apt install git -y
@@ -33,58 +33,55 @@ clear
 
 echo -e "\e[1;36m Instalando ferramentas em \e[1;32mGolang\e[0m"
 
-sleep 5
+sleep 3
 
-go install github.com/Emoe/kxss@latest
+go install -v github.com/Emoe/kxss@latest
 
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 
-go install github.com/lc/gau/v2/cmd/gau@latest
+go install -v github.com/lc/gau/v2/cmd/gau@latest
 
 go install -v github.com/tomnomnom/anew@latest
 
-go install github.com/ffuf/ffuf@latest
+go install -v github.com/ffuf/ffuf@latest
 
 go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 
 ~/go/bin/nuclei -update-templates
 
+sleep 3
+
 clear
-echo -e "\e[1;36m Baixando repositórios de ferramentas de \e[1;32mPYTHON\e[0m"
-
-sleep 4
-# Baixando ferramentas do Github
-pip install git-dumper
-
+echo -e "\e[1;36m Baixando repositórios de ferramentas de \e[1;32mPYTHON\e[0m"                                                                                                   sleep 3
+# Baixando ferramentas do Github                           pip install git-dumper                                     
 git clone https://github.com/devanshbatham/ParamSpider
-
-# Acessando o diretório da ferramenta baixada
+                                                           # Acessando o diretório da ferramenta baixada
 cd ParamSpider
 
 # Instalando os requerimentos
 pip install -r requirements.txt
 
-cd ~
-
+cd ~                                                       
 git clone https://github.com/AngelSecurityTeam/Cam-Hackers
 
-cd Cam-Hackers
-
+cd Cam-Hackers                                             
 pip install -r requirements.txt
 
 cd ~
 
-echo -e "\e[1;36mBaixando o \e[1;92mSeclist\e[0m"
+echo -e "\e[1;36mBaixando o \e[1;92mSecList\e[0m"          
 
-sleep 5
+sleep 3
 
 git clone https://github.com/danielmiessler/SecLists.git
 
 # Função de menu opcional para instalar o nmap e openssh
+# Esta função é apenas um teste e poderá ser subistituida futuramente
+
 menu() {
-    echo -e "Deseja instalar o \e[92mnmap\e[0m e o \e[34mopenssh?\e[0m"
+    echo -e "Deseja instalar o \e[92mnmap\e[0m e o \e[36mopenssh?\e[0m"
     echo -e "1 - Sim"
     echo -e "2 - Não"
     read opcao
@@ -108,6 +105,11 @@ menu
 
 clear
 
-echo -e "\e[1;92mInstalação concluida"
+echo -e "\e[1;92mInstalação concluida\e[0m"
 
+cp ~/go/bin/* ~/../usr/bin
+
+echo -e "\e[33mAviso: \e[92mAs ferramentas em Golang foram copiadas para ~/../usr/bin para facilitar o uso das mesmas."
+echo -e "Ao inves de digitar o caminho ~/go/bin você poderá agora chamar a ferramenta apenas digitando o seu nome\e[0m"
+echo -e "Ex: \e[34msubfinder -d alvo\e[0m"
 exit 0
