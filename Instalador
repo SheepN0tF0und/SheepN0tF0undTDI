@@ -112,4 +112,5 @@ cp ~/go/bin/* ~/../usr/bin
 echo -e "\e[33mAviso: \e[92mAs ferramentas em Golang foram copiadas para ~/../usr/bin para facilitar o uso das mesmas."
 echo -e "Ao inves de digitar o caminho ~/go/bin você poderá agora chamar a ferramenta apenas digitando o seu nome\e[0m"
 echo -e "Ex: \e[34msubfinder -d alvo\e[0m"
+echo -e "Ex2: \e[36nuclei -u alvo -t ~/nuclei-templates/cves
 exit 0
