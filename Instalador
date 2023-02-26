@@ -14,6 +14,7 @@ echo -e "\e[1;36m Vamos começar atualizando o \e[1;32mTermux.\e[0m"
 sleep 3
 cd ~
 apt update -y && apt full-upgrade -y
+
 clear
 
 echo -e "\e[1;36m Instalando o Git e as duas linguagens necessarias \e[1;32mPython, Golang\e[0m"
@@ -54,7 +55,11 @@ go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 sleep 3
 
 clear
-echo -e "\e[1;36m Baixando repositórios de ferramentas de \e[1;32mPYTHON\e[0m"                                                                                                   sleep 3
+
+echo -e "\e[1;36m Baixando repositórios de ferramentas de \e[1;32mPYTHON\e[0m"                                                                                                   
+
+sleep 3
+
 # Baixando ferramentas do Github                           pip install git-dumper                                     
 git clone https://github.com/devanshbatham/ParamSpider
                                                            # Acessando o diretório da ferramenta baixada
