@@ -1,4 +1,3 @@
-#!/bin/bash
 #Script criado por SheepN0tF0und baseado no script da Lyanna na intenção de auxiliar os alunos do TDI.
 
 # Checa se o sistema é Linux ou não
@@ -56,27 +55,28 @@ sleep 3
 
 clear
 
-echo -e "\e[1;36m Baixando repositórios de ferramentas de \e[1;32mPYTHON\e[0m"                                                                                                   
+echo -e "\e[1;36m Baixando repositórios de ferramentas de \e[1;32mPYTHON\e[0m"
 
 sleep 3
 
-# Baixando ferramentas do Github                           pip install git-dumper                                     
+#Baixando Repositorios do GitHub
 git clone https://github.com/devanshbatham/ParamSpider
-                                                           # Acessando o diretório da ferramenta baixada
+
 cd ParamSpider
 
-# Instalando os requerimentos
-pip install -r requirements.txt
-
-cd ~                                                       
-git clone https://github.com/AngelSecurityTeam/Cam-Hackers
-
-cd Cam-Hackers                                             
 pip install -r requirements.txt
 
 cd ~
 
-echo -e "\e[1;36mBaixando o \e[1;92mSecList\e[0m"          
+git clone https://github.com/AngelSecurityTeam/Cam-Hackers
+
+cd Cam-Hackers
+
+pip install -r requirements.txt
+
+cd ~
+
+echo -e "\e[1;36mBaixando o \e[1;92mSecList\e[0m"
 
 sleep 3
 
